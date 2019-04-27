@@ -307,9 +307,16 @@ def fit_binary(est, i, X, y, alpha, C, learning_rate, max_iter,
     assert y_i.shape[0] == y.shape[0] == sample_weight.shape[0]
     dataset, intercept_decay = make_dataset(X, y_i, sample_weight)
 
-    per_feature_alpha = per_feature_alpha.ravel()
-    per_feature_beta = per_feature_beta.ravel()
-    modal_vector = modal_vector.ravel()
+    if not isinstance( per_feature_alpha, np.ndarray ):
+        per_feature_alpha = np.array( per_feature_alpha )
+    if not isinstance( per_feature_beta, np.ndarray ):
+        per_feature_beta = np.array( per_feature_beta )
+    if not isinstance( modal_vector, np.ndarray ):
+        modal_vector = np.array( modal_vector )
+
+    per_feature_alpha = per_feature_alpha.astype(float).ravel()
+    per_feature_beta = per_feature_beta.astype(float).ravel()
+    modal_vector = modal_vector.astype(float).ravel()
 
     penalty_type = est._get_penalty_type(est.penalty)
     learning_rate_type = est._get_learning_rate_type(learning_rate)
