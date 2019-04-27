@@ -55,4 +55,28 @@ This script is not modified.
 ## Citations
 Please kindly cite our paper if you are using this package.
 
-If you are using non-zero priors(`modal_vector`).
+If you are using non-zero priors(`modal_vector`), please cite:
+```bibtex
+@inproceedings{yang_regularization_2019,
+	address = {Montréal, Canada},
+	title = {A {Regularization} {Approach} to {Combining} {Keywords} and {Training} {Data} in {Technology}-{Assisted} {Review}},
+	booktitle = {Proceedings of the 17th edition of the {International} {Conference} on {Artificial} {Intelligence} and {Law} ({ICAIL})},
+	author = {Yang, Eugene and Lewis, David D. and Frieder, Ophir},
+	month = jun,
+	year = {2019}
+}
+```
+
+If you are also using per feature regularization penalty(`per_feature_alpha` or
+`per_feature_beta`), please cite:
+```bibtex
+@inproceedings{yang_text_2019,
+	address = {Paris, France},
+	title = {Text {Retrieval} {Priors} for {Bayesian} {Logistic} {Regression}},
+	booktitle = {Proceedings of the 41st {International} {ACM} {SIGIR} {Conference} on {Research} and {Development} in {Information} {Retrieval}},
+	publisher = {ACM},
+	author = {Yang, Eugene and Lewis, David D. and Frieder, Ophir},
+	month = jul,
+	year = {2019}
+}
+```
