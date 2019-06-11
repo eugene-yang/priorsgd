@@ -2,6 +2,7 @@
 import os
 from os.path import join
 
+import setuptools 
 from setuptools import setup
 
 import numpy
